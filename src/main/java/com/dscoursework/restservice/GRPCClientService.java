@@ -34,8 +34,8 @@ public class GRPCClientService {
 	private int[] stubPorts = {8081,8082,8083,8084,8085,8086,8087,8088};
 
 	@Value("${com.dscoursework.grpc.client.serverAddress}")
-	private String[] serverAddress;
-	serverAddress = {'34.125.132.66' , '34.125.65.40' , '34.125.249.40' , '34.125.105.235' , '34.125.44.223' , '34.125.44.223' , '34.125.59.87' , '34.125.4.236' , '34.125.45.40'};
+
+	private String[] severAddress = {"34.125.132.66" , "34.125.65.40" , "34.125.249.40" , "34.125.105.235" , "34.125.44.223" , "34.125.44.223" , "34.125.59.87" , "34.125.4.236" , "34.125.45.40"};
 
 	private ManagedChannel[] channels;
 	private BlockMultServiceBlockingStub[] stubs;
