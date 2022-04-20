@@ -92,7 +92,6 @@ public class GRPCClientService {
 					.keepAliveWithoutCalls(true)
 					.usePlaintext()
 					.build();
-			System.out.println("Connecting to server at: " + serverAddress[i]);
 		}
 		return chans;
 	}
