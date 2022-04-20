@@ -85,13 +85,14 @@ public class GRPCClientService {
 
 	private ManagedChannel[] createChannels() {
 		ManagedChannel[] chans = new ManagedChannel[stubPorts.length];
-		System.out.println("Connecting to server at: " + serverAddress[i]);
+		
 
 		for(int i =0; i < stubPorts.length; i++) {
 			chans[i] = ManagedChannelBuilder.forAddress(serverAddress[i], stubPorts[i])
 					.keepAliveWithoutCalls(true)
 					.usePlaintext()
 					.build();
+			System.out.println("Connecting to server at: " + serverAddress[i]);
 		}
 		return chans;
 	}
